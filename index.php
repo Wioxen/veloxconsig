@@ -15,6 +15,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Velox Consig — Crédito Consignado Rápido para CLT, Aposentados e Pensionistas</title>
 <meta name="description" content="Empréstimo consignado com as menores taxas para trabalhadores CLT, aposentados e pensionistas do INSS. Simulação gratuita e atendimento humanizado com a Caroline. Fale agora no WhatsApp.">
+<meta name="theme-color" content="#0E6E63">
+
+<!-- Favicon: logo Velox Consig (SVG embutido) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTIiIGZpbGw9IiMwRTZFNjMiLz48cGF0aCBkPSJNMTYgMTMgTDI0IDM0IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI0IDM0IEwzMiAxMyIgc3Ryb2tlPSIjRjRBNjJBIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHJlY3Qgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiByeD0iMTIiIGZpbGw9IiMwRTZFNjMiLz48cGF0aCBkPSJNMTYgMTMgTDI0IDM0IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTTI0IDM0IEwzMiAxMyIgc3Ryb2tlPSIjRjRBNjJBIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
