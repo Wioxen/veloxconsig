@@ -700,3 +700,98 @@
 
   play();
 </script>
+
+<!-- ============================================================
+     FIREBASE ANALYTICS (Google Analytics para Firebase)
+     ------------------------------------------------------------
+     COMO ATIVAR:
+     1) Acesse console.firebase.google.com e crie/abra seu projeto
+     2) Adicione um App da Web (ícone </>) e ATIVE o Google Analytics
+     3) Copie o objeto firebaseConfig e cole abaixo, substituindo
+        os valores "COLE_AQUI_..."
+     Obs.: o measurementId (G-XXXX) é obrigatório para o Analytics.
+     ============================================================ -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getAnalytics, logEvent, setAnalyticsCollectionEnabled }
+    from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+  /* ===== COLE AQUI AS CREDENCIAIS DO SEU PROJETO FIREBASE ===== */
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyB9vbg83_j6sD3pR-mf7BIh26W4KRBYCj8",
+  authDomain: "veloxconsig-c0c08.firebaseapp.com",
+  projectId: "veloxconsig-c0c08",
+  storageBucket: "veloxconsig-c0c08.firebasestorage.app",
+  messagingSenderId: "459890661037",
+  appId: "1:459890661037:web:b33a2f629362db74541824",
+  measurementId: "G-Z3D263PYQX"
+};
+
+  let analytics = null;
+
+  // Só inicializa se as credenciais foram preenchidas (evita erro no console)
+  if (!JSON.stringify(firebaseConfig).includes("COLE_AQUI")) {
+    try {
+      const app = initializeApp(firebaseConfig);
+      analytics = getAnalytics(app);
+      setAnalyticsCollectionEnabled(analytics, true);
+    } catch (e) {
+      console.warn("Firebase Analytics não pôde ser iniciado:", e);
+    }
+  } else {
+    console.info("Velox Consig: preencha o firebaseConfig para ativar o Analytics.");
+  }
+
+  // Helper: dispara evento só se o Analytics estiver ativo
+  const track = (evento, params = {}) => {
+    if (analytics) logEvent(analytics, evento, params);
+  };
+  window.veloxTrack = track; // disponível para uso externo, se precisar
+
+  /* ---------- 1) Cliques no WhatsApp (conversão principal) ---------- */
+  document.querySelectorAll("a.wa").forEach(a => {
+    a.addEventListener("click", () => {
+      // Descobre de qual parte da página veio o clique
+      const sec = a.closest("section");
+      const origem =
+        sec ? sec.id :
+        a.closest("header") ? "header" :
+        a.closest("footer") ? "rodape" :
+        "botao_flutuante";
+
+      // Descobre o serviço, quando o clique parte de um card de serviço
+      const card = a.closest(".service");
+      const servico = card ? card.querySelector("h3").textContent.trim() : "geral";
+
+      const params = {
+        origem: origem,
+        servico: servico,
+        texto_botao: a.textContent.trim(),
+        metodo: "whatsapp"
+      };
+
+      track("whatsapp_click", params);   // evento personalizado
+      track("generate_lead", params);    // evento de conversão padrão do GA4
+    });
+  });
+
+  /* ---------- 2) Abertura das perguntas do FAQ ---------- */
+  document.querySelectorAll("details").forEach(d => {
+    d.addEventListener("toggle", () => {
+      if (d.open) track("faq_abrir", { pergunta: d.querySelector("summary").textContent.trim() });
+    });
+  });
+
+  /* ---------- 3) Até onde o visitante rolou (seções vistas) ---------- */
+  const vistas = new Set();
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && e.target.id && !vistas.has(e.target.id)) {
+        vistas.add(e.target.id);
+        track("secao_vista", { secao: e.target.id });
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll("section[id]").forEach(s => obs.observe(s));
+</script>
