@@ -303,6 +303,40 @@
     .btn-lg{font-size:1.02rem;padding:1rem 1.4rem}
     .wa-float{right:12px;bottom:12px;padding:.8rem}
   }
+  /* ---------- Quiz / Simulador ---------- */
+  .quiz-overlay{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(9,7,5,.75);backdrop-filter:blur(6px)}
+  .quiz-overlay.open{display:flex}
+  .quiz-modal{position:relative;width:100%;max-width:440px;background:#1B1713;border:1px solid rgba(255,255,255,.08);border-radius:24px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7);padding:2rem 1.5rem;color:#F3EEE9;max-height:calc(100dvh - 32px);overflow-y:auto}
+  .quiz-close{position:absolute;top:12px;right:14px;width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.06);color:#C9C0B8;font-size:1.5rem;line-height:1;display:grid;place-items:center}
+  .quiz-close:hover{background:rgba(255,255,255,.12);color:#fff}
+  .quiz-logo{display:flex;justify-content:center;margin-bottom:1.3rem}
+  .quiz-logo .mark{width:42px;height:42px}
+  .quiz-progress{display:flex;gap:8px;justify-content:center;margin:0 0 1.9rem;min-height:8px}
+  .qd{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.18);transition:all .25s}
+  .qd.done{background:#33C36A}
+  .qd.now{width:26px;border-radius:999px;background:var(--accent)}
+  .quiz-icon{display:grid;place-items:center;margin:0 auto 1.3rem;color:var(--accent)}
+  .quiz-icon.ok{color:#33C36A}
+  .quiz-icon svg{width:52px;height:52px}
+  .quiz-modal h3{font-family:'Sora',sans-serif;font-size:1.5rem;line-height:1.22;text-align:center;margin:0 0 .7rem;color:#fff}
+  .quiz-modal .qsub{text-align:center;color:#B9AEA4;margin:0 auto 1.8rem;max-width:34ch;font-size:1rem;line-height:1.5}
+  .quiz-opts{display:flex;flex-direction:column;gap:.8rem}
+  .qbtn{width:100%;padding:1.1rem;border-radius:14px;font-family:'Sora',sans-serif;font-weight:700;font-size:1.05rem;cursor:pointer;border:1.5px solid rgba(255,255,255,.14);background:transparent;color:#EDE7E1;transition:all .15s}
+  .qbtn:hover{border-color:var(--accent);color:#fff}
+  .qbtn.primary{background:var(--accent);border-color:var(--accent);color:#231204}
+  .qbtn.primary:hover{background:var(--accent-deep);color:#231204}
+  .qbtn.wa{background:var(--wa);border-color:var(--wa);color:#06301f;display:flex;align-items:center;justify-content:center;gap:.5rem}
+  .qbtn.wa:hover{background:#20c15c;color:#06301f}
+  .qbtn.wa svg{width:22px;height:22px}
+  .quiz-selects{display:flex;gap:.7rem;margin-bottom:1rem}
+  .quiz-selects select{flex:1;min-width:0;padding:1rem .9rem;border-radius:12px;background:#251F19;border:1px solid rgba(255,255,255,.14);color:#EDE7E1;font-size:1rem;font-family:inherit;cursor:pointer}
+  .quiz-input-label{display:block;font-family:'Sora';font-weight:600;color:#fff;margin:0 0 .6rem;font-size:1.02rem}
+  .quiz-input{width:100%;box-sizing:border-box;padding:1.1rem;border-radius:12px;background:#251F19;border:1px solid rgba(255,255,255,.14);color:#fff;font-size:1.35rem;font-family:'Sora';font-weight:700;margin-bottom:1.2rem}
+  .quiz-input::placeholder{color:#6B625B;font-weight:600}
+  .quiz-input:focus{outline:none;border-color:var(--accent)}
+  .quiz-back{display:block;margin:1.3rem auto 0;background:none;border:0;color:#9A8F85;font-family:'Sora';font-weight:600;cursor:pointer;font-size:.92rem}
+  .quiz-back:hover{color:#fff}
+  @keyframes qshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
 </style>
 
 <!-- ======================= HEADER ======================= -->
@@ -336,7 +370,7 @@
       <h1>Seu dinheiro na conta com <em>rapidez</em> e as menores taxas.</h1>
       <p class="lead">Empréstimo consignado para quem é <strong>CLT</strong>, <strong>aposentado</strong> ou <strong>pensionista</strong>. Simulação gratuita e atendimento humano, do começo ao fim.</p>
       <div class="hero-cta">
-        <a class="btn btn-wa btn-lg wa" data-msg="Olá! Quero fazer uma simulação gratuita do meu empréstimo consignado." href="#">
+        <a class="btn btn-wa btn-lg quiz-open" data-service="" href="#">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
           Simular no WhatsApp
         </a>
@@ -380,7 +414,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Liberação rápida, direto na sua conta</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Simulação gratuita e sem compromisso</li>
         </ul>
-        <a class="btn btn-accent wa" data-msg="Olá! Quero simular o Empréstimo Consignado CLT." href="#">Simular Empréstimo CLT</a>
+        <a class="btn btn-accent quiz-open" data-service="clt" href="#">Simular Empréstimo CLT</a>
       </article>
 
       <article class="service alt">
@@ -394,7 +428,7 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Atendimento paciente e sem pressa</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Ajuda em cada passo, do começo ao dinheiro na conta</li>
         </ul>
-        <a class="btn btn-accent wa" data-msg="Olá! Sou aposentado(a)/pensionista e quero simular meu empréstimo consignado." href="#">Simular meu empréstimo</a>
+        <a class="btn btn-accent quiz-open" data-service="inss" href="#">Simular meu empréstimo</a>
       </article>
 
     </div>
@@ -530,7 +564,7 @@
     <div class="cta-band">
       <h2>Pronto para liberar seu crédito?</h2>
       <p>Faça agora sua simulação gratuita. É rápido, sem compromisso e você fala direto com quem entende do assunto.</p>
-      <a class="btn btn-accent btn-lg wa" data-msg="Olá! Quero fazer minha simulação gratuita agora." href="#">
+      <a class="btn btn-accent btn-lg quiz-open" data-service="" href="#">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
         Falar no WhatsApp agora
       </a>
@@ -572,6 +606,17 @@
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
   <span class="label">Fale conosco</span>
 </a>
+
+
+<!-- ======================= QUIZ / SIMULADOR ======================= -->
+<div class="quiz-overlay" id="quiz" role="dialog" aria-modal="true" aria-label="Simulador de empréstimo">
+  <div class="quiz-modal">
+    <button class="quiz-close" id="quizClose" aria-label="Fechar">&times;</button>
+    <div class="quiz-logo"><span class="logo"><span class="mark"></span></span></div>
+    <div class="quiz-progress" id="quizProg"></div>
+    <div id="quizBody"></div>
+  </div>
+</div>
 
 <script>
   /* ===== TROQUE PELO NÚMERO REAL: 55 + DDD + número (só dígitos) ===== */
@@ -699,6 +744,159 @@
   });
 
   play();
+
+  /* ============ QUIZ / SIMULADOR ============ */
+  (function(){
+    const overlay=document.getElementById('quiz');
+    const bodyEl=document.getElementById('quizBody');
+    const prog=document.getElementById('quizProg');
+    const track=(e,pr)=>{ if(window.veloxTrack) window.veloxTrack(e,pr||{}); };
+
+    const IC={
+      user:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1"/><circle cx="8.5" cy="8" r="4"/><path d="M20 8v6M23 11h-6"/></svg>',
+      cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 3v3M16 3v3"/></svg>',
+      home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg>',
+      doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M14 2v4h4M8 12h8M8 16h6M8 8h3"/></svg>',
+      card:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>',
+      ok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>'
+    };
+    const WA_SVG='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>';
+
+    const FLOWS={
+      clt:{ label:'Empréstimo Consignado CLT', steps:[
+        {key:'carteira', label:'Trabalha de carteira assinada', icon:IC.user, type:'choice',
+         q:'Você trabalha de carteira assinada?', sub:'O empréstimo consignado CLT é exclusivo para trabalhadores com carteira assinada.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'admissao', label:'Admissão na empresa', icon:IC.cal, type:'monthyear',
+         q:'Quando você entrou na empresa em que trabalha?', sub:'Selecione o mês e o ano de admissão no seu emprego atual.'},
+        {key:'empresa2anos', label:'Empresa com mais de 2 anos', icon:IC.home, type:'choice',
+         q:'A empresa onde você trabalha existe há mais de 2 anos?', sub:'A empresa precisa ter pelo menos 2 anos de existência para ser elegível.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'jafez', label:'Já fez consignado CLT antes', icon:IC.doc, type:'choice',
+         q:'Você já fez empréstimo consignado CLT antes?', sub:'Isso nos ajuda a entender melhor o seu perfil.',
+         options:[{v:'Sim, já fiz',primary:true},{v:'Não, nunca fiz'}]}
+      ]},
+      inss:{ label:'Consignado Aposentados e Pensionistas (INSS)', steps:[
+        {key:'beneficio', label:'Aposentado ou pensionista do INSS', icon:IC.user, type:'choice',
+         q:'Você é aposentado(a) ou pensionista do INSS?', sub:'Este consignado é exclusivo para quem recebe benefício do INSS.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'recebimento', label:'Forma de recebimento do benefício', icon:IC.card, type:'choice',
+         q:'Como você recebe o seu benefício?', sub:'Isso ajuda a encontrar a melhor condição para você.',
+         options:[{v:'Em conta bancária',primary:true},{v:'Cartão ou outro'}]},
+        {key:'consignadoAtivo', label:'Já possui consignado ativo', icon:IC.doc, type:'choice',
+         q:'Você já tem algum empréstimo consignado ativo?', sub:'Isso nos ajuda a entender melhor o seu perfil.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]}
+      ]}
+    };
+    const PICKER={type:'service', icon:IC.user, q:'Qual empréstimo você procura?', sub:'Escolha a opção que combina com o seu perfil.',
+      options:[{v:'Sou CLT (carteira assinada)',go:'clt',primary:true},{v:'Sou aposentado(a) ou pensionista',go:'inss'}]};
+    const VALUE={type:'value'};
+
+    let service=null, seq=[], step=0, answers={}, valorRaw='';
+
+    const brl=d=>((parseInt(d,10)||0)/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+    const iconHTML=(svg,cls)=>`<div class="quiz-icon ${cls||''}">${svg}</div>`;
+    const backHTML=()=>step>0?'<button class="quiz-back" id="qBack">&larr; Voltar</button>':'';
+    function shake(){ const m=overlay.querySelector('.quiz-modal'); m.style.animation='qshake .3s'; setTimeout(()=>m.style.animation='',320); }
+
+    function open(svc){
+      answers={}; valorRaw='';
+      if(svc){ service=svc; seq=FLOWS[svc].steps.concat([VALUE]); }
+      else { service=null; seq=[PICKER]; }
+      step=0;
+      overlay.classList.add('open');
+      document.body.style.overflow='hidden';
+      track('quiz_start',{servico:svc||'a_escolher'});
+      render();
+    }
+    function close(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+    function next(){ step++; render(); }
+    function back(){ if(step>0){ step--; render(); } }
+
+    function renderProgress(){
+      prog.innerHTML='';
+      if(!service) return;
+      const total=FLOWS[service].steps.length;
+      if(step>=total) return;
+      for(let i=0;i<total;i++){
+        const d=document.createElement('span');
+        d.className='qd'+(i<step?' done':(i===step?' now':''));
+        prog.appendChild(d);
+      }
+    }
+
+    function render(){
+      const s=seq[step];
+      renderProgress();
+
+      if(s.type==='service'){
+        bodyEl.innerHTML=iconHTML(s.icon)+`<h3>${s.q}</h3><p class="qsub">${s.sub}</p><div class="quiz-opts">`+
+          s.options.map(o=>`<button class="qbtn ${o.primary?'primary':''}" data-go="${o.go}">${o.v}</button>`).join('')+`</div>`;
+        bodyEl.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{
+          service=b.dataset.go; seq=FLOWS[service].steps.concat([VALUE]); step=0;
+          track('quiz_servico',{servico:service}); render();
+        });
+      }
+      else if(s.type==='choice'){
+        bodyEl.innerHTML=iconHTML(s.icon)+`<h3>${s.q}</h3><p class="qsub">${s.sub}</p><div class="quiz-opts">`+
+          s.options.map(o=>`<button class="qbtn ${o.primary?'primary':''}" data-v="${o.v}">${o.v}</button>`).join('')+`</div>`+backHTML();
+        bodyEl.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>{
+          answers[s.key]=b.dataset.v; track('quiz_step',{campo:s.key,valor:b.dataset.v}); next();
+        });
+      }
+      else if(s.type==='monthyear'){
+        const meses=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+        const yNow=new Date().getFullYear(); let years='';
+        for(let y=yNow;y>=1975;y--) years+=`<option>${y}</option>`;
+        bodyEl.innerHTML=iconHTML(s.icon)+`<h3>${s.q}</h3><p class="qsub">${s.sub}</p>`+
+          `<div class="quiz-selects">`+
+            `<select id="qMes"><option value="" selected disabled>Mês</option>`+meses.map(m=>`<option>${m}</option>`).join('')+`</select>`+
+            `<select id="qAno"><option value="" selected disabled>Ano</option>${years}</select>`+
+          `</div><button class="qbtn primary" id="qCont">Continuar</button>`+backHTML();
+        bodyEl.querySelector('#qCont').onclick=()=>{
+          const m=bodyEl.querySelector('#qMes').value, a=bodyEl.querySelector('#qAno').value;
+          if(!m||!a){ shake(); return; }
+          answers[s.key]=`${m}/${a}`; track('quiz_step',{campo:s.key,valor:answers[s.key]}); next();
+        };
+      }
+      else if(s.type==='value'){
+        bodyEl.innerHTML=iconHTML(IC.ok,'ok')+
+          `<h3>Tudo certo! Você foi <span style="color:var(--accent)">pré-aprovado</span> para simulação.</h3>`+
+          `<p class="qsub">Digite o valor que deseja e continue para finalizar no WhatsApp.</p>`+
+          `<label class="quiz-input-label">Quanto você precisa?</label>`+
+          `<input class="quiz-input" id="qValor" inputmode="numeric" placeholder="R$ 5.000,00">`+
+          `<button class="qbtn wa" id="qEnviar">${WA_SVG} Continuar</button>`+backHTML();
+        const inp=bodyEl.querySelector('#qValor');
+        inp.oninput=()=>{ valorRaw=inp.value.replace(/\D/g,'').slice(0,9); inp.value=valorRaw?brl(valorRaw):''; };
+        inp.focus();
+        bodyEl.querySelector('#qEnviar').onclick=()=>{ if(!valorRaw){ shake(); return; } finish(); };
+      }
+
+      const bk=bodyEl.querySelector('#qBack'); if(bk) bk.onclick=back;
+    }
+
+    function finish(){
+      const flow=FLOWS[service];
+      const linhas=flow.steps.filter(st=>answers[st.key]!=null).map(st=>`\u2022 ${st.label}: ${answers[st.key]}`);
+      const valor=brl(valorRaw);
+      const msg=`Olá! Fiz a simulação no site da Velox Consig e quero continuar.\n\n`+
+                `\u2022 Perfil: ${flow.label}\n`+linhas.join('\n')+`\n\u2022 Valor desejado: ${valor}\n\n`+
+                `Pode me ajudar com a simulação?`;
+      const url=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+      track('quiz_complete',{servico:service,valor:valor});
+      track('generate_lead',{servico:flow.label,valor:valor,metodo:'whatsapp_quiz'});
+      window.open(url,'_blank');
+      close();
+    }
+
+    // Gatilhos
+    document.querySelectorAll('.quiz-open').forEach(b=>{
+      b.addEventListener('click',e=>{ e.preventDefault(); open(b.dataset.service||null); });
+    });
+    document.getElementById('quizClose').onclick=close;
+    overlay.addEventListener('click',e=>{ if(e.target===overlay) close(); });
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&overlay.classList.contains('open')) close(); });
+  })();
 </script>
 
 <!-- ============================================================
@@ -710,6 +908,11 @@
      3) Copie o objeto firebaseConfig e cole abaixo, substituindo
         os valores "COLE_AQUI_..."
      Obs.: o measurementId (G-XXXX) é obrigatório para o Analytics.
+
+     >> SEGURANÇA: use APENAS a config do App da Web (pública, feita para
+        o navegador). NUNCA cole aqui uma chave de conta de serviço
+        (service account / private_key) — ela é secreta, dá acesso de
+        administrador ao projeto e ficaria visível no código-fonte.
      ============================================================ -->
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
@@ -717,16 +920,19 @@
     from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 
   /* ===== COLE AQUI AS CREDENCIAIS DO SEU PROJETO FIREBASE ===== */
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyB9vbg83_j6sD3pR-mf7BIh26W4KRBYCj8",
-  authDomain: "veloxconsig-c0c08.firebaseapp.com",
-  projectId: "veloxconsig-c0c08",
-  storageBucket: "veloxconsig-c0c08.firebasestorage.app",
-  messagingSenderId: "459890661037",
-  appId: "1:459890661037:web:b33a2f629362db74541824",
-  measurementId: "G-Z3D263PYQX"
-};
+  const firebaseConfig = {
+    // Já preenchidos (projeto veloxconsig-c0c08):
+    projectId:         "veloxconsig-c0c08",
+    authDomain:        "veloxconsig-c0c08.firebaseapp.com",
+    storageBucket:     "veloxconsig-c0c08.appspot.com",
+
+    // FALTAM ESTES 4 — copie do Console do Firebase:
+    // Configurações do projeto > Geral > Seus apps > App da Web > firebaseConfig
+    apiKey:            "COLE_AQUI_A_API_KEY",          // começa com "AIza..."
+    messagingSenderId: "COLE_AQUI_O_SENDER_ID",        // só números
+    appId:             "COLE_AQUI_O_APP_ID",           // formato 1:123...:web:abc...
+    measurementId:     "G-COLE_AQUI"                   // obrigatório p/ o Analytics
+  };
 
   let analytics = null;
 
