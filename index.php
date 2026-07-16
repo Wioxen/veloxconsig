@@ -5,8 +5,7 @@
   ANTES DE PUBLICAR, TROQUE:
   1) WHATSAPP_NUMBER (logo abaixo, no <script>) pelo número real
      no formato: 55 + DDD + número. Ex.: 5573999999999
-  2) A foto da Caroline: substitua o bloco <svg class="promoter-photo">
-     por <img src="caroline.jpg" alt="Caroline dos Santos Moreira" class="promoter-photo">
+  2) (seção da promotora removida)
   3) O CNPJ e a razão social no rodapé.
   4) Os depoimentos por avaliações reais de clientes.
   ============================================================
@@ -14,7 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Velox Consig — Crédito Consignado Rápido para CLT, Aposentados e Pensionistas</title>
-<meta name="description" content="Empréstimo consignado com as menores taxas para trabalhadores CLT, aposentados e pensionistas do INSS. Simulação gratuita e atendimento humanizado com a Caroline. Fale agora no WhatsApp.">
+<meta name="description" content="Empréstimo consignado com as menores taxas para trabalhadores CLT, aposentados e pensionistas do INSS. Simulação gratuita e atendimento humanizado. Fale agora no WhatsApp.">
 <meta name="theme-color" content="#12100E">
 
 <!-- Favicon: logo Velox Consig (SVG embutido) -->
@@ -173,7 +172,6 @@
   .service li svg{width:20px;height:20px;color:var(--brand);flex:none;margin-top:.1rem}
   .service .btn{margin-top:auto;width:100%}
 
-  /* ---------- Promotora (Caroline) ---------- */
   #promotora{background:var(--ink);color:#EDE7E1}
   .promoter{display:grid;gap:2.2rem;align-items:center}
   @media(min-width:820px){.promoter{grid-template-columns:280px 1fr}}
@@ -348,7 +346,6 @@
     </a>
     <nav class="nav-links" aria-label="Navegação principal">
       <a href="#servicos">Serviços</a>
-      <a href="#promotora">Quem atende</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#depoimentos">Depoimentos</a>
     </nav>
@@ -388,7 +385,7 @@
       <h3>Descubra quanto você pode liberar</h3>
       <div class="mini"><span class="n">01</span><p><b>Trabalhador CLT</b><br>Desconto direto na folha, com taxas menores que o crédito comum.</p></div>
       <div class="mini"><span class="n">02</span><p><b>Aposentado ou pensionista</b><br>Parcela fixa descontada do benefício do INSS, sem susto no fim do mês.</p></div>
-      <div class="mini"><span class="n">03</span><p><b>Atendimento humano</b><br>Você fala direto com a Caroline, sem robô e sem letra miúda.</p></div>
+      <div class="mini"><span class="n">03</span><p><b>Atendimento humano</b><br>Você fala com gente de verdade, sem robô e sem letra miúda.</p></div>
     </aside>
   </div>
 </section>
@@ -435,73 +432,6 @@
   </div>
 </section>
 
-<!-- ======================= PROMOTORA / CAROLINE ======================= -->
-<section id="promotora">
-  <div class="wrap promoter">
-    <div class="promoter-photo-wrap">
-      <!-- ===== TROQUE ESTE SVG PELA FOTO REAL DA CAROLINE =====
-           Ex.: <img class="promoter-photo" src="caroline.jpg" alt="Caroline dos Santos Moreira"> -->
-      <svg class="promoter-photo" viewBox="0 0 260 260" role="img" aria-label="Foto de Caroline dos Santos Moreira">
-        <defs>
-          <clipPath id="ph"><rect width="260" height="260" rx="28"/></clipPath>
-          <linearGradient id="bgp" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#E7F0EE"/><stop offset="1" stop-color="#CFE0DB"/>
-          </linearGradient>
-        </defs>
-        <g clip-path="url(#ph)">
-          <rect width="260" height="260" fill="url(#bgp)"/>
-          <!-- blazer -->
-          <path d="M55 260 C60 205 95 182 130 182 C165 182 200 205 205 260 Z" fill="#C64105"/>
-          <path d="M130 182 L112 214 L118 260 L108 260 L100 210 Z" fill="#A33403"/>
-          <path d="M130 182 L148 214 L142 260 L152 260 L160 210 Z" fill="#A33403"/>
-          <!-- blusa -->
-          <path d="M112 200 L130 226 L148 200 L148 260 L112 260 Z" fill="#F7FAF9"/>
-          <!-- pescoço -->
-          <path d="M116 168 h28 v22 c0 10 -28 10 -28 0 Z" fill="#E7B394"/>
-          <!-- cabelo (trás) -->
-          <path d="M78 118 C78 66 182 66 182 118 C182 160 176 190 168 200 C168 150 160 120 130 120 C100 120 92 150 92 200 C84 190 78 160 78 118 Z" fill="#3A2A22"/>
-          <!-- rosto -->
-          <ellipse cx="130" cy="120" rx="42" ry="48" fill="#F1C6A7"/>
-          <!-- orelhas + brincos -->
-          <circle cx="89" cy="124" r="8" fill="#F1C6A7"/><circle cx="171" cy="124" r="8" fill="#F1C6A7"/>
-          <circle cx="89" cy="136" r="3.4" fill="#FD6303"/><circle cx="171" cy="136" r="3.4" fill="#FD6303"/>
-          <!-- cabelo (frente) -->
-          <path d="M86 116 C86 74 174 74 174 116 C174 104 162 92 130 92 C120 108 100 104 92 128 C90 124 86 120 86 116 Z" fill="#43312A"/>
-          <path d="M170 110 C176 130 172 158 166 172 C170 150 168 128 160 112 Z" fill="#43312A"/>
-          <!-- sobrancelhas -->
-          <path d="M104 110 q10 -6 20 -1" stroke="#4A362C" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-          <path d="M136 109 q10 -5 20 1" stroke="#4A362C" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-          <!-- olhos -->
-          <ellipse cx="114" cy="122" rx="4.6" ry="5.4" fill="#3A2A22"/>
-          <ellipse cx="146" cy="122" rx="4.6" ry="5.4" fill="#3A2A22"/>
-          <circle cx="115.4" cy="120.5" r="1.5" fill="#fff"/><circle cx="147.4" cy="120.5" r="1.5" fill="#fff"/>
-          <!-- nariz -->
-          <path d="M130 126 q-4 8 -1 12" stroke="#D89B78" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-          <!-- sorriso -->
-          <path d="M117 146 q13 12 26 0" stroke="#B76A52" stroke-width="3" fill="none" stroke-linecap="round"/>
-          <!-- blush -->
-          <ellipse cx="103" cy="138" rx="7" ry="4" fill="#EEA98A" opacity=".5"/>
-          <ellipse cx="157" cy="138" rx="7" ry="4" fill="#EEA98A" opacity=".5"/>
-        </g>
-      </svg>
-      <span class="promoter-badge">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>
-        Especialista
-      </span>
-    </div>
-    <div class="promoter-info">
-      <span class="eyebrow">Quem vai te atender</span>
-      <h2>Caroline dos Santos Moreira</h2>
-      <div class="promoter-role">Promotora de Crédito · Especialista em Consignado</div>
-      <p>À frente da Velox Consig, a Caroline atende cada cliente de forma próxima e transparente. Ela entende sua necessidade, compara as condições das instituições parceiras e explica tudo em linguagem simples — sem letra miúda, sem promessa que não se cumpre. O objetivo é um só: fazer o melhor crédito caber no seu bolso, com agilidade e confiança.</p>
-      <a class="btn btn-wa btn-lg wa" data-msg="Olá, Caroline! Vim pelo site e quero falar sobre crédito consignado." href="#">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-        Falar com a Caroline
-      </a>
-    </div>
-  </div>
-</section>
-
 <!-- ======================= COMO FUNCIONA ======================= -->
 <section id="como-funciona">
   <div class="wrap">
@@ -510,7 +440,7 @@
       <h2>Do primeiro contato ao dinheiro na conta</h2>
     </div>
     <div class="steps">
-      <div class="step"><div class="num">1</div><h4>Chame no WhatsApp</h4><p>Você fala com a Caroline e conta o que precisa. Sem formulário chato.</p></div>
+      <div class="step"><div class="num">1</div><h4>Chame no WhatsApp</h4><p>Você fala com a nossa equipe e conta o que precisa. Sem formulário chato.</p></div>
       <div class="step"><div class="num">2</div><h4>Simulação gratuita</h4><p>A gente busca a melhor condição entre as instituições parceiras.</p></div>
       <div class="step"><div class="num">3</div><h4>Envio dos documentos</h4><p>Você manda os documentos com segurança, tudo de forma orientada.</p></div>
       <div class="step"><div class="num">4</div><h4>Dinheiro liberado</h4><p>Após a aprovação, o valor cai direto na sua conta. Rápido e seguro.</p></div>
@@ -550,7 +480,7 @@
     </div>
     <div class="faq">
       <details><summary>A simulação tem algum custo?</summary><p>Não. A simulação é totalmente gratuita e sem compromisso. Você só segue em frente se as condições fizerem sentido para você.</p></details>
-      <details><summary>Quem pode contratar o consignado?</summary><p>Trabalhadores CLT (carteira assinada) e aposentados ou pensionistas do INSS. Fale com a Caroline para confirmar as condições para o seu caso.</p></details>
+      <details><summary>Quem pode contratar o consignado?</summary><p>Trabalhadores CLT (carteira assinada) e aposentados ou pensionistas do INSS. Fale com a nossa equipe para confirmar as condições para o seu caso.</p></details>
       <details><summary>Em quanto tempo o dinheiro cai na conta?</summary><p>Depende da instituição financeira e da análise, mas o consignado costuma ser bem mais rápido que o empréstimo comum. Assim que aprovado, o valor é depositado diretamente na sua conta.</p></details>
       <details><summary>A Velox Consig é o banco que empresta o dinheiro?</summary><p>Não. A Velox Consig é correspondente bancário: intermediamos e buscamos a melhor condição junto às instituições financeiras parceiras. Não emprestamos com recursos próprios.</p></details>
       <details><summary>Meus dados ficam seguros?</summary><p>Sim. Tratamos suas informações com sigilo e de acordo com a LGPD. Seus dados são usados apenas para a simulação e a contratação do crédito.</p></details>
@@ -590,7 +520,7 @@
       <div class="col">
         <h5>Contato</h5>
         <a class="wa" data-msg="Olá! Vim pelo site da Velox Consig." href="#">WhatsApp</a>
-        <p>Atendimento com Caroline dos Santos Moreira</p>
+        <p>Atendimento humanizado da nossa equipe</p>
         <p>Seg. a Sex. · horário comercial</p>
       </div>
     </div>
@@ -683,7 +613,7 @@
 
   // Depoimentos (5 estrelas). Substitua por avaliações reais quando tiver.
   const reviews = [
-    { txt: "Atendimento nota 10! A Caroline explicou tudo com paciência e o dinheiro caiu rapidinho na conta. Recomendo demais a Velox Consig.", name: "Marta Ribeiro", role: "Aposentada", avatar: avatarWoman("avm","#F3EEEA","#D9713F","#F1C6A7","#B9B3AE") },
+    { txt: "Atendimento nota 10! Me explicaram tudo com paciência e o dinheiro caiu rapidinho na conta. Recomendo demais a Velox Consig.", name: "Marta Ribeiro", role: "Aposentada", avatar: avatarWoman("avm","#F3EEEA","#D9713F","#F1C6A7","#B9B3AE") },
     { txt: "Consegui uma taxa muito melhor do que eu esperava no meu consignado CLT. Processo simples, tudo pelo WhatsApp, sem burocracia.", name: "Rafael Oliveira", role: "Trabalhador CLT", avatar: avatarMan("avr","#F3EEEA","#C64105","#E7B28C","#33251E") },
     { txt: "Fui muito bem atendido, sem enrolação e sem letra miúda. A Velox Consig passa segurança de verdade. Já indiquei para a família toda.", name: "José Carlos Souza", role: "Pensionista", avatar: avatarSenior("avj","#EEEAE4","#5A6067","#E7B28C","#A49E98") },
   ];
