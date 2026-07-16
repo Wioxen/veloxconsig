@@ -926,19 +926,16 @@
     from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 
   /* ===== COLE AQUI AS CREDENCIAIS DO SEU PROJETO FIREBASE ===== */
-  const firebaseConfig = {
-    // Já preenchidos (projeto veloxconsig-c0c08):
-    projectId:         "veloxconsig-c0c08",
-    authDomain:        "veloxconsig-c0c08.firebaseapp.com",
-    storageBucket:     "veloxconsig-c0c08.appspot.com",
-
-    // FALTAM ESTES 4 — copie do Console do Firebase:
-    // Configurações do projeto > Geral > Seus apps > App da Web > firebaseConfig
-    apiKey:            "COLE_AQUI_A_API_KEY",          // começa com "AIza..."
-    messagingSenderId: "COLE_AQUI_O_SENDER_ID",        // só números
-    appId:             "COLE_AQUI_O_APP_ID",           // formato 1:123...:web:abc...
-    measurementId:     "G-COLE_AQUI"                   // obrigatório p/ o Analytics
-  };
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyB9vbg83_j6sD3pR-mf7BIh26W4KRBYCj8",
+  authDomain: "veloxconsig-c0c08.firebaseapp.com",
+  projectId: "veloxconsig-c0c08",
+  storageBucket: "veloxconsig-c0c08.firebasestorage.app",
+  messagingSenderId: "459890661037",
+  appId: "1:459890661037:web:b33a2f629362db74541824",
+  measurementId: "G-Z3D263PYQX"
+};
 
   let analytics = null;
 
