@@ -12,8 +12,8 @@
 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velox Consig — Crédito Consignado Rápido para CLT, Aposentados e Pensionistas</title>
-<meta name="description" content="Empréstimo consignado com as menores taxas para trabalhadores CLT, aposentados e pensionistas do INSS. Simulação gratuita e atendimento humanizado. Fale agora no WhatsApp.">
+<title>Velox Consig — Crédito Rápido para CLT, Autônomo, Aposentados, Pensionistas e Crefaz</title>
+<meta name="description" content="Empréstimo para CLT, autônomo, aposentados e pensionistas do INSS, e crédito na conta de luz com a Crefaz. Simulação gratuita e atendimento humanizado. Fale agora no WhatsApp.">
 <meta name="theme-color" content="#12100E">
 
 <!-- Favicon: logo Velox Consig (SVG embutido) -->
@@ -335,6 +335,15 @@
   .quiz-back{display:block;margin:1.3rem auto 0;background:none;border:0;color:#9A8F85;font-family:'Sora';font-weight:600;cursor:pointer;font-size:.92rem}
   .quiz-back:hover{color:#fff}
   @keyframes qshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+  /* ---------- Diferenciais ---------- */
+  .benefits{padding:1.5rem 0;background:var(--ink);color:#EDE7E1}
+  .benefits-grid{display:grid;grid-template-columns:1fr;gap:1.1rem}
+  @media(min-width:640px){.benefits-grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:980px){.benefits-grid{grid-template-columns:repeat(4,1fr)}}
+  .benefit{display:flex;gap:.75rem;align-items:center}
+  .benefit>svg{width:30px;height:30px;color:var(--accent);flex:none}
+  .benefit b{display:block;font-family:'Sora',sans-serif;font-size:.98rem;color:#fff;line-height:1.2}
+  .benefit span{font-size:.85rem;color:#B9AEA4}
 </style>
 
 <!-- ======================= HEADER ======================= -->
@@ -363,9 +372,9 @@
   <div class="speed" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Crédito consignado sem enrolação</span>
+      <span class="eyebrow">Crédito rápido sem enrolação</span>
       <h1>Seu dinheiro na conta com <em>rapidez</em> e as menores taxas.</h1>
-      <p class="lead">Empréstimo consignado para quem é <strong>CLT</strong>, <strong>aposentado</strong> ou <strong>pensionista</strong>. Simulação gratuita e atendimento humano, do começo ao fim.</p>
+      <p class="lead">Crédito para <strong>CLT</strong>, <strong>autônomo</strong>, <strong>aposentado</strong> e <strong>pensionista</strong> — e empréstimo na conta de luz com a <strong>Crefaz</strong>. Simulação gratuita e atendimento humano.</p>
       <div class="hero-cta">
         <a class="btn btn-wa btn-lg quiz-open" data-service="" href="#">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
@@ -383,10 +392,20 @@
     <aside class="hero-card" aria-label="Resumo dos serviços">
       <span class="tag">Para quem é</span>
       <h3>Descubra quanto você pode liberar</h3>
-      <div class="mini"><span class="n">01</span><p><b>Trabalhador CLT</b><br>Desconto direto na folha, com taxas menores que o crédito comum.</p></div>
-      <div class="mini"><span class="n">02</span><p><b>Aposentado ou pensionista</b><br>Parcela fixa descontada do benefício do INSS, sem susto no fim do mês.</p></div>
-      <div class="mini"><span class="n">03</span><p><b>Atendimento humano</b><br>Você fala com gente de verdade, sem robô e sem letra miúda.</p></div>
+      <div class="mini"><span class="n">01</span><p><b>CLT, aposentado e pensionista</b><br>Consignado com desconto direto e taxas menores que o crédito comum.</p></div>
+      <div class="mini"><span class="n">02</span><p><b>Autônomo e informal</b><br>Trabalha por conta própria? Tem crédito pessoal pra você também.</p></div>
+      <div class="mini"><span class="n">03</span><p><b>Crefaz — conta de luz</b><br>Dinheiro rápido com a parcela na conta de energia, sem comprovar renda.</p></div>
     </aside>
+  </div>
+</section>
+
+<!-- ======================= DIFERENCIAIS ======================= -->
+<section class="benefits" aria-label="Diferenciais">
+  <div class="wrap benefits-grid">
+    <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Resposta em minutos</b><span>Atendimento ágil pelo WhatsApp</span></div></div>
+    <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Simulação gratuita</b><span>Sem custo e sem compromisso</span></div></div>
+    <div class="benefit"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg><div><b>Tudo pelo WhatsApp</b><span>Sem filas e sem sair de casa</span></div></div>
+    <div class="benefit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg><div><b>Correspondente bancário</b><span>Parceiros regulados e confiáveis</span></div></div>
   </div>
 </section>
 
@@ -426,6 +445,34 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Ajuda em cada passo, do começo ao dinheiro na conta</li>
         </ul>
         <a class="btn btn-accent quiz-open" data-service="inss" href="#">Simular meu empréstimo</a>
+      </article>
+
+      <article class="service">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7.5" r="4"/><path d="M5 21v-1.5a7 7 0 0 1 14 0V21"/></svg>
+        </div>
+        <h3>Empréstimo para Autônomo</h3>
+        <p>Para quem trabalha por conta própria ou de forma informal. Crédito pessoal com análise rápida, mesmo sem carteira assinada.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Não precisa de carteira assinada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Análise de crédito rápida e sem burocracia</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Simulação gratuita e sem compromisso</li>
+        </ul>
+        <a class="btn btn-accent quiz-open" data-service="autonomo" href="#">Simular como autônomo</a>
+      </article>
+
+      <article class="service alt">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4.9 1 .9 1.7v.4h5.2v-.4c0-.7.3-1.3.9-1.7A6 6 0 0 0 12 3z"/></svg>
+        </div>
+        <h3>Empréstimo Crefaz <span style="font-weight:600;color:var(--muted);font-size:.9rem">(conta de luz)</span></h3>
+        <p>Dinheiro rápido com as parcelas na sua conta de energia. Sem comprovar renda — ideal para autônomos, informais e até quem está negativado.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Não precisa comprovar renda</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Parcelas debitadas na conta de luz</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Liberação em até 24h, mesmo negativado</li>
+        </ul>
+        <a class="btn btn-accent quiz-open" data-service="crefaz" href="#">Simular na conta de luz</a>
       </article>
 
     </div>
@@ -480,7 +527,8 @@
     </div>
     <div class="faq">
       <details><summary>A simulação tem algum custo?</summary><p>Não. A simulação é totalmente gratuita e sem compromisso. Você só segue em frente se as condições fizerem sentido para você.</p></details>
-      <details><summary>Quem pode contratar o consignado?</summary><p>Trabalhadores CLT (carteira assinada) e aposentados ou pensionistas do INSS. Fale com a nossa equipe para confirmar as condições para o seu caso.</p></details>
+      <details><summary>Quem pode contratar?</summary><p>Trabalhadores CLT, autônomos, aposentados e pensionistas do INSS. Também temos o empréstimo Crefaz, com pagamento na conta de luz, para quem precisa de dinheiro rápido sem comprovar renda. Fale com a nossa equipe para confirmar as condições do seu caso.</p></details>
+      <details><summary>Como funciona o empréstimo na conta de luz (Crefaz)?</summary><p>É um crédito em que as parcelas são cobradas junto com a sua fatura de energia. Basta ter a conta de luz no seu nome e o fornecimento ativo; não é preciso comprovar renda e a liberação costuma sair em até 24h após a aprovação.</p></details>
       <details><summary>Em quanto tempo o dinheiro cai na conta?</summary><p>Depende da instituição financeira e da análise, mas o consignado costuma ser bem mais rápido que o empréstimo comum. Assim que aprovado, o valor é depositado diretamente na sua conta.</p></details>
       <details><summary>A Velox Consig é o banco que empresta o dinheiro?</summary><p>Não. A Velox Consig é correspondente bancário: intermediamos e buscamos a melhor condição junto às instituições financeiras parceiras. Não emprestamos com recursos próprios.</p></details>
       <details><summary>Meus dados ficam seguros?</summary><p>Sim. Tratamos suas informações com sigilo e de acordo com a LGPD. Seus dados são usados apenas para a simulação e a contratação do crédito.</p></details>
@@ -688,6 +736,7 @@
       home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg>',
       doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M14 2v4h4M8 12h8M8 16h6M8 8h3"/></svg>',
       card:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>',
+      bolt:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>',
       ok:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5 5-5.5"/></svg>'
     };
     const WA_SVG='<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>';
@@ -716,10 +765,37 @@
         {key:'consignadoAtivo', label:'Já possui consignado ativo', icon:IC.doc, type:'choice',
          q:'Você já tem algum empréstimo consignado ativo?', sub:'Isso nos ajuda a entender melhor o seu perfil.',
          options:[{v:'Sim',primary:true},{v:'Não'}]}
+      ]},
+      autonomo:{ label:'Empréstimo para Autônomo', steps:[
+        {key:'contaPropria', label:'Trabalha por conta própria', icon:IC.user, type:'choice',
+         q:'Você trabalha por conta própria?', sub:'Este crédito é para autônomos e trabalhadores informais, mesmo sem carteira assinada.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'contaBancaria', label:'Tem conta bancária no próprio nome', icon:IC.card, type:'choice',
+         q:'Você tem conta bancária no seu nome?', sub:'É por ela que o dinheiro será liberado.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'renda', label:'Renda mensal aproximada', icon:IC.doc, type:'choice',
+         q:'Qual a sua renda mensal aproximada?', sub:'Isso ajuda a encontrar a melhor condição para você.',
+         options:[{v:'Até R$ 2.000',primary:true},{v:'R$ 2.000 a R$ 5.000'},{v:'Acima de R$ 5.000'}]}
+      ]},
+      crefaz:{ label:'Empréstimo Crefaz (conta de luz)', steps:[
+        {key:'contaLuzNome', label:'Conta de luz no próprio nome', icon:IC.bolt, type:'choice',
+         q:'A conta de energia está no seu nome?', sub:'Para o empréstimo Crefaz, a conta de luz precisa estar no nome de quem solicita.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'fornecimentoAtivo', label:'Fornecimento de energia ativo', icon:IC.home, type:'choice',
+         q:'O fornecimento de energia está ativo no endereço?', sub:'A energia precisa estar ligada no local indicado.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]},
+        {key:'contaBancaria', label:'Tem conta bancária no próprio nome', icon:IC.card, type:'choice',
+         q:'Você tem conta bancária no seu nome?', sub:'É por ela que o dinheiro será depositado.',
+         options:[{v:'Sim',primary:true},{v:'Não'}]}
       ]}
     };
     const PICKER={type:'service', icon:IC.user, q:'Qual empréstimo você procura?', sub:'Escolha a opção que combina com o seu perfil.',
-      options:[{v:'Sou CLT (carteira assinada)',go:'clt',primary:true},{v:'Sou aposentado(a) ou pensionista',go:'inss'}]};
+      options:[
+        {v:'Sou CLT (carteira assinada)',go:'clt',primary:true},
+        {v:'Sou autônomo(a) ou informal',go:'autonomo'},
+        {v:'Sou aposentado(a) ou pensionista',go:'inss'},
+        {v:'Quero na conta de luz (Crefaz)',go:'crefaz'}
+      ]};
     const VALUE={type:'value'};
 
     let service=null, seq=[], step=0, answers={}, valorRaw='';
