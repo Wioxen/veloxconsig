@@ -13,7 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Velox Consig — Crédito Consignado para CLT, Servidor Público (SIAPE), Aposentados e Pensionistas</title>
-<meta name="description" content="Empréstimo consignado para CLT, servidores públicos estaduais e federais (SIAPE), aposentados e pensionistas do INSS, e crédito na conta de luz com a Crefaz. Simulação gratuita. Fale no WhatsApp.">
+<meta name="description" content="Empréstimo consignado para CLT, servidores públicos estaduais e federais (SIAPE), aposentados e pensionistas do INSS, e crédito na conta de energia. Simulação gratuita. Fale no WhatsApp.">
 <meta name="theme-color" content="#12100E">
 
 <!-- Favicon: logo Velox Consig (SVG embutido) -->
@@ -374,7 +374,7 @@
     <div>
       <span class="eyebrow">Crédito rápido sem enrolação</span>
       <h1>Seu dinheiro na conta com <em>rapidez</em> e as menores taxas.</h1>
-      <p class="lead">Consignado para <strong>CLT</strong>, <strong>servidor público</strong>, <strong>aposentado</strong> e <strong>pensionista</strong> — e empréstimo na conta de luz com a <strong>Crefaz</strong>. Simulação gratuita e atendimento humano.</p>
+      <p class="lead">Consignado para <strong>CLT</strong>, <strong>servidor público</strong>, <strong>aposentado</strong> e <strong>pensionista</strong> — e <strong>crédito na conta de energia</strong>. Simulação gratuita e atendimento humano.</p>
       <div class="hero-cta">
         <a class="btn btn-wa btn-lg quiz-open" data-service="" href="#">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
@@ -394,7 +394,7 @@
       <h3>Descubra quanto você pode liberar</h3>
       <div class="mini"><span class="n">01</span><p><b>CLT, aposentado e pensionista</b><br>Consignado com desconto direto e taxas menores que o crédito comum.</p></div>
       <div class="mini"><span class="n">02</span><p><b>Servidor público</b><br>Estadual ou federal (SIAPE), com as menores taxas do mercado.</p></div>
-      <div class="mini"><span class="n">03</span><p><b>Crefaz — conta de luz</b><br>Dinheiro rápido com a parcela na conta de energia, sem comprovar renda.</p></div>
+      <div class="mini"><span class="n">03</span><p><b>Crédito na conta de energia</b><br>Dinheiro rápido com a parcela na sua conta de luz, sem comprovar renda.</p></div>
     </aside>
   </div>
 </section>
@@ -465,14 +465,14 @@
         <div class="icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4.9 1 .9 1.7v.4h5.2v-.4c0-.7.3-1.3.9-1.7A6 6 0 0 0 12 3z"/></svg>
         </div>
-        <h3>Empréstimo Crefaz <span style="font-weight:600;color:var(--muted);font-size:.9rem">(conta de luz)</span></h3>
+        <h3>Crédito na Conta de Energia</h3>
         <p>Dinheiro rápido com as parcelas na sua conta de energia. Sem comprovar renda — uma alternativa mesmo para quem está negativado.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Não precisa comprovar renda</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Parcelas debitadas na conta de luz</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Liberação em até 24h, mesmo negativado</li>
         </ul>
-        <a class="btn btn-accent quiz-open" data-service="crefaz" href="#">Simular na conta de luz</a>
+        <a class="btn btn-accent quiz-open" data-service="energia" href="#">Simular na conta de energia</a>
       </article>
 
     </div>
@@ -527,8 +527,8 @@
     </div>
     <div class="faq">
       <details><summary>A simulação tem algum custo?</summary><p>Não. A simulação é totalmente gratuita e sem compromisso. Você só segue em frente se as condições fizerem sentido para você.</p></details>
-      <details><summary>Quem pode contratar?</summary><p>Trabalhadores CLT, servidores públicos estaduais e federais (SIAPE), aposentados e pensionistas do INSS. Também temos o empréstimo Crefaz, com pagamento na conta de luz, para quem precisa de dinheiro rápido sem comprovar renda. Fale com a nossa equipe para confirmar as condições do seu caso.</p></details>
-      <details><summary>Como funciona o empréstimo na conta de luz (Crefaz)?</summary><p>É um crédito em que as parcelas são cobradas junto com a sua fatura de energia. Basta ter a conta de luz no seu nome e o fornecimento ativo; não é preciso comprovar renda e a liberação costuma sair em até 24h após a aprovação.</p></details>
+      <details><summary>Quem pode contratar?</summary><p>Trabalhadores CLT, servidores públicos estaduais e federais (SIAPE), aposentados e pensionistas do INSS. Também temos o crédito na conta de energia, para quem precisa de dinheiro rápido sem comprovar renda. Fale com a nossa equipe para confirmar as condições do seu caso.</p></details>
+      <details><summary>Como funciona o crédito na conta de energia?</summary><p>É um crédito em que as parcelas são cobradas junto com a sua fatura de energia. Basta ter a conta de luz no seu nome e o fornecimento ativo; não é preciso comprovar renda e a liberação costuma sair em até 24h após a aprovação.</p></details>
       <details><summary>Em quanto tempo o dinheiro cai na conta?</summary><p>Depende da instituição financeira e da análise, mas o consignado costuma ser bem mais rápido que o empréstimo comum. Assim que aprovado, o valor é depositado diretamente na sua conta.</p></details>
       <details><summary>A Velox Consig é o banco que empresta o dinheiro?</summary><p>Não. A Velox Consig é correspondente bancário: intermediamos e buscamos a melhor condição junto às instituições financeiras parceiras. Não emprestamos com recursos próprios.</p></details>
       <details><summary>Meus dados ficam seguros?</summary><p>Sim. Tratamos suas informações com sigilo e de acordo com a LGPD. Seus dados são usados apenas para a simulação e a contratação do crédito.</p></details>
@@ -778,9 +778,9 @@
          q:'Você já tem algum empréstimo consignado ativo?', sub:'Serve para avaliarmos a sua margem disponível.',
          options:[{v:'Sim',primary:true},{v:'Não'}]}
       ]},
-      crefaz:{ label:'Empréstimo Crefaz (conta de luz)', steps:[
+      energia:{ label:'Crédito na Conta de Energia', steps:[
         {key:'contaLuzNome', label:'Conta de luz no próprio nome', icon:IC.bolt, type:'choice',
-         q:'A conta de energia está no seu nome?', sub:'Para o empréstimo Crefaz, a conta de luz precisa estar no nome de quem solicita.',
+         q:'A conta de energia está no seu nome?', sub:'Para este crédito, a conta de energia precisa estar no nome de quem solicita.',
          options:[{v:'Sim',primary:true},{v:'Não'}]},
         {key:'fornecimentoAtivo', label:'Fornecimento de energia ativo', icon:IC.home, type:'choice',
          q:'O fornecimento de energia está ativo no endereço?', sub:'A energia precisa estar ligada no local indicado.',
@@ -795,7 +795,7 @@
         {v:'Sou CLT (carteira assinada)',go:'clt',primary:true},
         {v:'Sou servidor(a) público(a)',go:'siape'},
         {v:'Sou aposentado(a) ou pensionista',go:'inss'},
-        {v:'Quero na conta de luz (Crefaz)',go:'crefaz'}
+        {v:'Quero na conta de energia',go:'energia'}
       ]};
     const VALUE={type:'value'};
 
