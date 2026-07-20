@@ -12,8 +12,8 @@
 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velox Consig — Crédito Consignado para CLT, Servidor Público (SIAPE), Aposentados e Pensionistas</title>
-<meta name="description" content="Empréstimo consignado para CLT, servidores públicos estaduais e federais (SIAPE), aposentados e pensionistas do INSS, e empréstimo na conta de luz. Simulação gratuita. Fale no WhatsApp.">
+<title>Velox Consig — Crédito Consignado para CLT, Servidor Público, Aposentados e Pensionistas</title>
+<meta name="description" content="Empréstimo consignado para CLT, servidores públicos estaduais e federais, aposentados e pensionistas do INSS, e empréstimo na conta de luz. Simulação gratuita. Fale no WhatsApp.">
 <meta name="theme-color" content="#12100E">
 
 <!-- Favicon: logo Velox Consig (SVG embutido) -->
@@ -393,7 +393,7 @@
       <span class="tag">Para quem é</span>
       <h3>Descubra quanto você pode liberar</h3>
       <div class="mini"><span class="n">01</span><p><b>CLT, aposentado e pensionista</b><br>Consignado com desconto direto e taxas menores que o crédito comum.</p></div>
-      <div class="mini"><span class="n">02</span><p><b>Servidor público</b><br>Estadual ou federal (SIAPE), com as menores taxas do mercado.</p></div>
+      <div class="mini"><span class="n">02</span><p><b>Servidor público</b><br>Estadual ou federal, com as menores taxas do mercado.</p></div>
       <div class="mini"><span class="n">03</span><p><b>Empréstimo na conta de luz</b><br>Dinheiro rápido com a parcela na sua conta de luz, sem comprovar renda.</p></div>
     </aside>
   </div>
@@ -451,14 +451,14 @@
         <div class="icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10M9 21V10M15 21V10M19 21V10"/><path d="M12 3 3 8h18l-9-5z"/></svg>
         </div>
-        <h3>Servidores Públicos <span style="font-weight:600;color:var(--muted);font-size:.9rem">(SIAPE)</span></h3>
-        <p>Para servidores públicos estaduais e federais (SIAPE), ativos ou aposentados. Consignado com desconto em folha e as menores taxas do mercado.</p>
+        <h3>Servidores Públicos</h3>
+        <p>Para servidores públicos estaduais e federais, ativos ou aposentados. Consignado com desconto em folha e as menores taxas do mercado.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Taxas entre as menores do mercado</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Prazos maiores e parcelas reduzidas</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Atende servidor estadual e federal</li>
         </ul>
-        <a class="btn btn-accent quiz-open" data-service="siape" href="#">Simular como servidor</a>
+        <a class="btn btn-accent quiz-open" data-service="servidor" href="#">Simular como servidor</a>
       </article>
 
       <article class="service alt">
@@ -527,7 +527,7 @@
     </div>
     <div class="faq">
       <details><summary>A simulação tem algum custo?</summary><p>Não. A simulação é totalmente gratuita e sem compromisso. Você só segue em frente se as condições fizerem sentido para você.</p></details>
-      <details><summary>Quem pode contratar?</summary><p>Trabalhadores CLT, servidores públicos estaduais e federais (SIAPE), aposentados e pensionistas do INSS. Também temos o empréstimo na conta de luz, para quem precisa de dinheiro rápido sem comprovar renda. Fale com a nossa equipe para confirmar as condições do seu caso.</p></details>
+      <details><summary>Quem pode contratar?</summary><p>Trabalhadores CLT, servidores públicos estaduais e federais, aposentados e pensionistas do INSS. Também temos o empréstimo na conta de luz, para quem precisa de dinheiro rápido sem comprovar renda. Fale com a nossa equipe para confirmar as condições do seu caso.</p></details>
       <details><summary>Como funciona o empréstimo na conta de luz?</summary><p>É um empréstimo em que as parcelas são cobradas junto com a sua fatura de luz. Basta ter a conta de luz no seu nome e o fornecimento ativo; não é preciso comprovar renda e a liberação costuma sair em até 24h após a aprovação.</p></details>
       <details><summary>Em quanto tempo o dinheiro cai na conta?</summary><p>Depende da instituição financeira e da análise, mas o consignado costuma ser bem mais rápido que o empréstimo comum. Assim que aprovado, o valor é depositado diretamente na sua conta.</p></details>
       <details><summary>A Velox Consig é o banco que empresta o dinheiro?</summary><p>Não. A Velox Consig é correspondente bancário: intermediamos e buscamos a melhor condição junto às instituições financeiras parceiras. Não emprestamos com recursos próprios.</p></details>
@@ -767,10 +767,10 @@
          q:'Você já tem algum empréstimo consignado ativo?', sub:'Isso nos ajuda a entender melhor o seu perfil.',
          options:[{v:'Sim',primary:true},{v:'Não'}]}
       ]},
-      siape:{ label:'Consignado para Servidor Público (SIAPE)', steps:[
+      servidor:{ label:'Consignado para Servidor Público', steps:[
         {key:'vinculo', label:'Tipo de vínculo', icon:IC.gov, type:'choice',
-         q:'Você é servidor público estadual ou federal?', sub:'O consignado SIAPE atende servidores federais; também trabalhamos com convênios estaduais.',
-         options:[{v:'Federal (SIAPE)',primary:true},{v:'Estadual'},{v:'Municipal ou outro'}]},
+         q:'Você é servidor público estadual ou federal?', sub:'Trabalhamos com convênios para servidores federais e estaduais.',
+         options:[{v:'Federal',primary:true},{v:'Estadual'},{v:'Municipal ou outro'}]},
         {key:'situacao', label:'Situação funcional', icon:IC.doc, type:'choice',
          q:'Qual a sua situação atual?', sub:'Isso ajuda a encontrar a melhor condição para o seu perfil.',
          options:[{v:'Ativo (na ativa)',primary:true},{v:'Aposentado(a) ou pensionista'}]},
@@ -793,7 +793,7 @@
     const PICKER={type:'service', icon:IC.user, q:'Qual empréstimo você procura?', sub:'Escolha a opção que combina com o seu perfil.',
       options:[
         {v:'Sou CLT (carteira assinada)',go:'clt',primary:true},
-        {v:'Sou servidor(a) público(a)',go:'siape'},
+        {v:'Sou servidor(a) público(a)',go:'servidor'},
         {v:'Sou aposentado(a) ou pensionista',go:'inss'},
         {v:'Quero na conta de luz',go:'energia'}
       ]};
